@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>JUNKNET · Oracle Explorer</title>
+  <link rel="icon" type="image/png" href="assets/junk.png">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <!-- CSS Styles would be here -->
+  <style>
+    /* All your CSS goes here */
+    body {
+        background-color: #000;
+        color: #efe9dc;
+        font-family: 'Share Tech Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- All your application HTML would go here -->
+    <h1>JUNKNET Oracle Explorer</h1>
+    <p>Welcome to the JUNKNET virtual ecosystem.</p>
+  </div>
+
+  <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+  <script src="https://unpkg.com/lightweight-charts@latest/dist/lightweight-charts.standalone.production.js"></script>
+  <script>
+    /* ================================
+       Constants & Configuration
+       ================================ */
+    // In a real production app, the LP_WALLET might be fetched from an API endpoint
+    // to avoid exposing it directly in the client-side code.
+    const LP_WALLET = 'EVFFgBoaDwcJDBnr7goXJDF8ydRJHuy8pw3SCVpA4m6Q'; // Example public key
+    
+    // ... (Rest of your client-side JavaScript logic) ...
+    // This section should contain all your existing frontend logic,
+    // which is omitted here for brevity.
+
+    console.log("JUNKNET Frontend Initialized");
+
+  </script>
+</body>
+</html>
+```
+
+### ### 4. Environment Variable Template
+
+This file is crucial for anyone who wants to run your project. It tells them what secret keys and configuration they need to provide.
+
+```:Environment Variables Template:.env.example
+# -----------------------------------------------------------------
+# JUNKNET Environment Variables
+# Copy this file to .env and fill in your own values.
+# Do NOT commit your .env file to a public repository.
+# -----------------------------------------------------------------
+
+# The port your server will run on
+PORT=3000
+
+# Your public-facing URL
+PUBLIC_URL=http://localhost:3000
+
+# --- Solana Configuration ---
+# Your RPC endpoint (e.g., from Helius, QuickNode, or Alchemy)
+RPC_URL=
+# The public key of the wallet that will receive SOL fees
+LP_WALLET=
+# The SECRET KEY of the LP_WALLET (in base58 format). Required for sending SOL.
+LP_SECRET_KEY=
+# The mint address of the $JUNK token
+JUNK_MINT=
+
+# --- Optional Services ---
+# API Key for xAI (Grok) to enable AI features
+XAI_API_KEY=
+
+# SMTP credentials for sending email notifications for curated applications
+SMTP_HOST=
+SMTP_PORT=587
+SMTP_USER=
+SMTP_PASS=
