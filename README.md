@@ -118,4 +118,4 @@ Fee Split (on AMM migration):
 MIT
  © 2025 JUNKNET
 
-<p align="center"> Made with 🪐 on <b>Solana</b> • Powered by $JUNK </p> ```
+<p align="center"> Made with 🪐 on <b>Solana</b> • Powered by $JUNK </p>
