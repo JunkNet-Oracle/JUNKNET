@@ -50,17 +50,13 @@ This creates aligned incentives for **token creators** and **ecosystem health**.
 ## 🛠 Local Setup & Installation
 
 ### 1️⃣ Clone the repository
-```bash
 git clone https://github.com/your-username/junknet.git
 cd junknet
 
-2️⃣ Install dependencies
+### 2️⃣ Install dependencies
 yarn install
 
-3️⃣ Configure environment variables
-
-Create a .env file:
-
+###3️⃣ Configure environment variables
 cp .env.example .env
 
 
@@ -78,14 +74,12 @@ XAI_API_KEY (optional) → Grok AI features
 
 SMTP_* (optional) → Email notifications
 
-4️⃣ Initialize the database
+###4️⃣ Initialize the database
 node server.js --init-db
 
-5️⃣ Start the server
+###5️⃣ Start the server
 node server.js
 
-
-App will run at 👉 http://localhost:3000
 
 🧱 Tech Stack
 
