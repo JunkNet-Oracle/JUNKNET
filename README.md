@@ -50,72 +50,76 @@ This creates aligned incentives for **token creators** and **ecosystem health**.
 ## 🛠 Local Setup & Installation
 
 ### 1️⃣ Clone the repository
+```bash
 git clone https://github.com/your-username/junknet.git
 cd junknet
+```
 
 ### 2️⃣ Install dependencies
+```bash
 yarn install
+```
 
-###3️⃣ Configure environment variables
+### 3️⃣ Configure environment variables
+Create a `.env` file:
+```bash
 cp .env.example .env
-
-
+```
 Fill in the required values:
+- `RPC_URL` → Solana RPC endpoint  
+- `LP_WALLET` → Wallet public key (receives platform fees)  
+- `LP_SECRET_KEY` → Wallet secret key (**keep private!**)  
+- `JUNK_MINT` → Mint address of $JUNK  
+- `XAI_API_KEY` (optional) → Grok AI features  
+- `SMTP_*` (optional) → Email notifications
 
-RPC_URL → Solana RPC endpoint
-
-LP_WALLET → Wallet public key (receives platform fees)
-
-LP_SECRET_KEY → Wallet secret key (keep private!)
-
-JUNK_MINT → Mint address of $JUNK
-
-XAI_API_KEY (optional) → Grok AI features
-
-SMTP_* (optional) → Email notifications
-
-###4️⃣ Initialize the database
+### 4️⃣ Initialize the database
+```bash
 node server.js --init-db
+```
 
-###5️⃣ Start the server
+### 5️⃣ Start the server
+```bash
 node server.js
+```
 
+App will run at 👉 [http://localhost:3000](http://localhost:3000)
 
-🧱 Tech Stack
+---
 
-⚡ Backend: Node.js, Express.js
+## 🧱 Tech Stack
 
-🗄 Database: better-sqlite3 (lightweight, file-based)
+- ⚡ **Backend:** Node.js, Express.js  
+- 🗄 **Database:** better-sqlite3 (lightweight, file-based)  
+- 🎨 **Frontend:** Vanilla HTML, CSS, JS (no frameworks)  
+- ⛓ **Blockchain:** [@solana/web3.js](https://github.com/solana-labs/solana-web3.js)  
+- 📊 **Charts:** [Lightweight Charts™ by TradingView](https://www.tradingview.com/lightweight-charts/)
 
-🎨 Frontend: Vanilla HTML, CSS, JS (no frameworks)
+---
 
-⛓ Blockchain: @solana/web3.js
+## 🔥 Tokenomics
 
-📊 Charts: Lightweight Charts™ by TradingView
+- **Platform Fee:** 0.005 SOL  
+- **Dynamic Sell Tax:** 15% → 5% floor  
+- **Fee Split (on AMM migration):**  
+  - 50% → Token Deployer  
+  - 50% → $JUNK Treasury (buybacks & burns)  
 
-🔥 Tokenomics
+---
 
-Platform Fee: 0.005 SOL
+## 🎮 Gamification
 
-Dynamic Sell Tax: 15% → 5% floor
+- 💰 Earn **JunkPoints ($JP)** for trading and launching tokens.  
+- 🏅 Unlock **achievements** and climb the **leaderboards**.  
+- 🔮 Compete in **bounties** for rewards.  
 
-Fee Split (on AMM migration):
+---
 
-50% → Token Deployer
+## 📜 License
+[MIT](./LICENSE) © 2025 JUNKNET
 
-50% → $JUNK Treasury (buybacks & burns)
+---
 
-🎮 Gamification
-
-💰 Earn JunkPoints ($JP) for trading and launching tokens.
-
-🏅 Unlock achievements and climb the leaderboards.
-
-🔮 Compete in bounties for rewards.
-
-📜 License
-
-MIT
- © 2025 JUNKNET
-
-<p align="center"> Made with 🪐 on <b>Solana</b> • Powered by $JUNK </p>
+<p align="center">  
+  Made with 🪐 on <b>Solana</b> • Powered by $JUNK  
+</p>
