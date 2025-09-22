@@ -1,95 +1,127 @@
-JUNKNET · Virtual Oracle Explorer & Launchpad
-JUNKNET is a playful yet powerful Solana explorer and virtual token launchpad. It provides a high-fidelity sandbox for developers, traders, and crypto-enthusiasts to experiment with tokenomics, trading strategies, and on-chain mechanics in a simulated environment without real-world financial risk.
+# 🌌 JUNKNET · Virtual Oracle Explorer & Launchpad
 
-All actions, from token creation to trading, are verified on the Solana blockchain for ultimate transparency, linking off-chain metadata to an immutable on-chain proof.
+**JUNKNET** is a playful yet powerful **Solana explorer** and **virtual token launchpad**.  
+It provides a high-fidelity sandbox for developers, traders, and crypto-enthusiasts to experiment with tokenomics, trading strategies, and on-chain mechanics — all in a **simulated environment without financial risk**.  
 
-Core Features
-Virtual Token Launchpad: Deploy custom virtual tokens in under a minute with a small SOL fee. No coding required.
+All actions — from token creation to trading — are verified on the Solana blockchain for **ultimate transparency**, linking off-chain metadata to an immutable on-chain proof.
 
-Live Trading Environment: Buy and sell any token launched on the platform in a simulated market.
+---
 
-Dynamic Sell Tax: A unique tax mechanism that starts at 15% and decreases to a 5% floor as a token raises more SOL, rewarding early participation.
+## ✨ Core Features
 
-On-Chain Verification: Every significant action (like launching a token) is tied to a real Solana transaction, providing a verifiable on-chain footprint.
+- 🚀 **Virtual Token Launchpad**  
+  Deploy custom virtual tokens in under a minute with a small SOL fee. No coding required.
 
-$JUNK Deflationary Tokenomics: All platform fees collected in SOL are used to periodically buy back and burn the $JUNK token, directly linking platform activity to deflationary pressure.
+- 📈 **Live Trading Environment**  
+  Buy and sell any token launched on the platform in a simulated market.
 
-Gamification & Bounties: Earn JunkPoints ($JP) for trading and launching tokens, unlock achievements, and climb the leaderboards.
+- 🔻 **Dynamic Sell Tax**  
+  Starts at **15%**, decreases to a **5% floor** as more SOL is raised — rewarding early participants.
 
-How It Works
-Token Launchpad
-Creating a token on JUNKNET is designed to be simple and transparent.
+- 🔗 **On-Chain Verification**  
+  Every token launch and major action is tied to a real Solana transaction for verifiability.
 
-Connect Wallet: Connect any Solana-compatible wallet.
+- 🔥 **$JUNK Deflationary Tokenomics**  
+  All platform fees are used to buy back and burn $JUNK, creating deflationary pressure.
 
-Fill in Details: Provide a name, symbol, description, and social links for your token.
+- 🏆 **Gamification & Bounties**  
+  Earn **JunkPoints ($JP)** for trading and launching tokens, unlock achievements, and climb leaderboards.
 
-Pay the Fee: Sign a transaction to pay the 0.005 SOL platform fee. This transaction also includes a memo with your token's details, creating a permanent on-chain record of your launch.
+---
 
-Verification & Creation: Our oracle verifies the SOL transaction. Once confirmed, your token is instantly created in the JUNKNET ecosystem and becomes available for trading.
+## ⚙️ How It Works
 
-Trading & Tokenomics
-Trading on JUNKNET is free of platform fees for buying and selling. The primary economic mechanism is a dynamic sell tax applied to every token launched on the platform.
+### 🧪 Token Launchpad
+1. **Connect Wallet** – Any Solana-compatible wallet.  
+2. **Fill Details** – Name, symbol, description, and socials.  
+3. **Pay Fee** – 0.005 SOL (includes on-chain memo with your token details).  
+4. **Verify & Create** – The oracle validates your tx, and your token is instantly live on JUNKNET.
 
-Dynamic Sell Tax: The sell tax starts at 15%. For every 1 SOL a project raises, the tax is reduced by 25% of the remaining reducible amount, until it reaches a final, fixed rate of 5%.
+### 💹 Trading & Tokenomics
+- **Dynamic Sell Tax** – Starts at 15%, reduces by 25% of the reducible amount per 1 SOL raised, until fixed at 5%.  
+- **Fee Distribution on Graduation**  
+  - 50% → Token Deployer  
+  - 50% → JUNKNET Treasury (for $JUNK buybacks & burns)
 
-Fee Distribution: When a token graduates and migrates to a real Automated Market Maker (AMM) like Meteora, the collected fees are distributed:
+This creates aligned incentives for **token creators** and **ecosystem health**.
 
-50% to the Token Deployer
+---
 
-50% to the JUNKNET Treasury (used for $JUNK buybacks and burns)
+## 🛠 Local Setup & Installation
 
-This system incentivizes both token creators and the overall health of the JUNKNET ecosystem.
-
-Local Setup & Installation
-To run your own instance of JUNKNET, follow these steps:
-
-1. Clone the repository:
-
-git clone [https://github.com/your-username/junknet.git](https://github.com/your-username/junknet.git)
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/your-username/junknet.git
 cd junknet
 
-2. Install dependencies:
-
+2️⃣ Install dependencies
 yarn install
 
-3. Set up your environment variables:
-Create a .env file by copying the example file:
+3️⃣ Configure environment variables
+
+Create a .env file:
 
 cp .env.example .env
 
-Now, open the .env file and fill in the required values:
 
-RPC_URL: Your Solana RPC endpoint.
+Fill in the required values:
 
-LP_WALLET: The public key of the wallet that will receive platform fees.
+RPC_URL → Solana RPC endpoint
 
-LP_SECRET_KEY: (IMPORTANT) The secret key for the LP_WALLET. This is required for the server to process sell transactions and send SOL to users. Never commit this key to a public repository.
+LP_WALLET → Wallet public key (receives platform fees)
 
-JUNK_MINT: The mint address of the $JUNK token.
+LP_SECRET_KEY → Wallet secret key (keep private!)
 
-XAI_API_KEY (Optional): An API key for Grok for AI-powered features.
+JUNK_MINT → Mint address of $JUNK
 
-SMTP_* (Optional): Credentials for an SMTP server to send email notifications for curated applications.
+XAI_API_KEY (optional) → Grok AI features
 
-4. Initialize the database:
-This command needs to be run only once to set up the SQLite database schema.
+SMTP_* (optional) → Email notifications
 
+4️⃣ Initialize the database
 node server.js --init-db
 
-5. Start the server:
-
+5️⃣ Start the server
 node server.js
 
-The application should now be running on http://localhost:3000.
 
-The Stack
-Backend: Node.js, Express.js
+App will run at 👉 http://localhost:3000
 
-Database: better-sqlite3 (lightweight and file-based)
+🧱 Tech Stack
 
-Frontend: Vanilla HTML, CSS, and JavaScript. No frameworks.
+⚡ Backend: Node.js, Express.js
 
-Blockchain Interaction: @solana/web3.js for all Solana interactions.
+🗄 Database: better-sqlite3 (lightweight, file-based)
 
-Charting: Lightweight Charts™ by TradingView.
+🎨 Frontend: Vanilla HTML, CSS, JS (no frameworks)
+
+⛓ Blockchain: @solana/web3.js
+
+📊 Charts: Lightweight Charts™ by TradingView
+
+🔥 Tokenomics
+
+Platform Fee: 0.005 SOL
+
+Dynamic Sell Tax: 15% → 5% floor
+
+Fee Split (on AMM migration):
+
+50% → Token Deployer
+
+50% → $JUNK Treasury (buybacks & burns)
+
+🎮 Gamification
+
+💰 Earn JunkPoints ($JP) for trading and launching tokens.
+
+🏅 Unlock achievements and climb the leaderboards.
+
+🔮 Compete in bounties for rewards.
+
+📜 License
+
+MIT
+ © 2025 JUNKNET
+
+<p align="center"> Made with 🪐 on <b>Solana</b> • Powered by $JUNK </p> ```
